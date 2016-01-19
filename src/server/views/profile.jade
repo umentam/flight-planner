@@ -1,0 +1,58 @@
+extends layout
+
+block title
+    title Profile
+
+block css
+    link(rel='stylesheet', type='text/css', href='/css/styles.css')
+
+
+block content
+    h3.col-sm-offset-2 User Profile
+    .container
+        .row
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xs-offset-0.col-sm-offset-0.col-md-offset-3.col-lg-offset-3.toppad
+                .panel.panel-info
+                    .panel-heading
+                        h3#panel-title.panel-title First Name Last Name
+                    .panel-body
+                        .row
+                            .col-md-3.col-lg-3(align='center')
+                                img#gravatar-profile.img-circle.img-responsive(alt='User Pic', src='')
+                                button#edit-prof.edit-btn(onclick='goToEditMode()') Edit Profile
+                            .col-md-9.col-lg-9
+                                table.table.table-user-information
+                                    tbody
+                                        tr
+                                            td#prof_username Username:
+                                        tr
+                                            td#prof_dob DOB:
+                                        tr
+                                            td#prof_street Address Street:
+                                        tr
+                                            td#prof_city Address City:
+                                        tr
+                                            td#prof_state Address State:
+                                        tr
+                                            td#prof_zip Address ZipCode:
+                                        tr
+                                            td#prof_phone Phone:
+                                        tr
+                                            td#prof_email Email:
+    .container
+        .row
+            .col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xs-offset-0.col-sm-offset-0.col-md-offset-3.col-lg-offset-3.toppad
+                .panel.panel-info
+                    .panel-heading
+                        h3#panel-title.panel-title Active Flight Plans
+                    .panel-body
+                        .row
+                            .col-md-3.col-lg-3(align='center')
+                                button#edit-plan.edit-btn(onclick='createPlan()') Create New Flight Plan
+                            .col-md-9.col-lg-9
+                                table.table.table-user-information
+                                    tbody#planHolder
+
+block scripts
+    script(src='js/form-methods.js')
+    script(src='js/profile.js')

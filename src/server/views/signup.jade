@@ -1,0 +1,64 @@
+extends layout
+
+block title
+    title Sign Up!
+
+block css
+    link(rel='stylesheet', type='text/css', href='/css/styles.css')
+
+block content
+    h3.col-sm-offset-2(style='margin-top:60px')  Sign Up!
+    form#signup-form.form-horizontal(role='form')
+        .form-group
+            label.control-label.col-sm-2(for='username') Username
+            .col-sm-8
+                input#username.form-control(type='text', name='username', placeholder='Enter username')
+        .form-group
+            label.control-label.col-sm-2(for='first_name') First Name
+            .col-sm-8
+                input#first_name.form-control(type='text', name='first_name', placeholder='Enter first name')
+        .form-group
+            label.control-label.col-sm-2(for='last_name') Last Name
+            .col-sm-8
+                input#last_name.form-control(type='text', name='last_name', placeholder='Enter last name')
+        .form-group
+            label.control-label.col-sm-2(for='password') Password:
+            .col-sm-8
+                input#password.form-control(type='password', name='password', placeholder='Enter password')
+        .form-group
+            label.control-label.col-sm-2(for='dob') DOB
+            .col-sm-8
+                input#dob.form-control(type='text', name='dob', placeholder='Enter dob')
+        .form-group
+            label.control-label.col-sm-2(for='address_street') Address Street
+            .col-sm-8
+                input#address_street.form-control(type='text', name='address_street', placeholder='Enter street')
+        .form-group
+            label.control-label.col-sm-2(for='address_city') Address City
+            .col-sm-8
+                input#address_city.form-control(type='text', name='address_city', placeholder='Enter city')
+        .form-group
+            label.control-label.col-sm-2(for='address_state') Address State
+            .col-sm-8
+                input#address_state.form-control(type='text', name='address_state', placeholder='Enter state')
+        .form-group
+            label.control-label.col-sm-2(for='address_zip') Address Zipcode
+            .col-sm-8
+                input#address_zip.form-control(type='text', name='address_zip', placeholder='Enter zipcode')
+        .form-group
+            label.control-label.col-sm-2(for='primary_phone') Phone:
+            .col-sm-8
+                input#primary_phone.form-control(type='text', name='primary_phone', placeholder='Enter phone')
+        .form-group
+            label.control-label.col-sm-2(for='primary_email') Email:
+            .col-sm-8
+                input#primary_email.form-control(type='email', name='primary_email', placeholder='Enter email')
+        .form-group
+            .col-sm-offset-2.col-sm-6
+                input.btn.btn-default(type='submit')
+
+block scripts
+    script(src='http://jqueryvalidation.org/files/dist/jquery.validate.min.js')
+    script(src='js/form-methods.js')
+    script(src='js/signup.js')
+

@@ -1,0 +1,27 @@
+extends layout
+
+block title
+    Title User Login
+
+block css
+    link(rel='stylesheet', type='text/css', href='/css/styles.css')
+
+block content
+    h3.col-sm-offset-2(style='margin-top:60px') User Login
+    form#login-form.form-horizontal(role='form')
+        .form-group
+            label.control-label.col-sm-2(for='username') Username
+            .col-xs-8
+                input#username.form-control(type='text', name='username', placeholder='Enter username', required='')
+        .form-group
+            label.control-label.col-sm-2(for='password') Password:
+            .col-xs-8
+                input#password.form-control(type='password', name='password', placeholder='Enter password', required='')
+        .form-group
+            .col-sm-offset-2.col-sm-6
+                input#login-validate.btn.btn-default(type='submit')
+
+block scripts
+    script(src='http://jqueryvalidation.org/files/dist/jquery.validate.min.js')
+    script(src='js/form-methods.js')
+    script(src='js/login.js')

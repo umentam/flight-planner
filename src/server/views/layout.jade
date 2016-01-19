@@ -1,0 +1,43 @@
+doctype html
+html
+   head
+      block title
+         title Default Title
+
+      block css
+
+      link(href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css', rel='stylesheet')
+      script(src='http://code.jquery.com/jquery-2.1.0.min.js')
+      script(src='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/1.1.1/js/md5.min.js')
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js")
+      script(src='js/login-check.js')
+      link(rel='stylesheet', type='text/css', href='/css/grav.css')
+
+   body
+       .navbar.navbar-inverse.navbar-fixed-top(role='navigation', style='height:50px;')
+           .container
+               .navbar-header
+                   button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                       span.sr-only
+                       span.icon-bar
+                       span.icon-bar
+                       span.icon-bar
+               .collapse.navbar-collapse
+                   ul#nav-links.nav.navbar-nav
+                       li.active
+                           a#nav-login(href='/login')
+                               span#switch Login
+                       li
+                           a#nav-signup(href='/signup') Signup
+                       li
+                           a#nav-profile(href='/profile') Profile
+                       li
+                           a(href='/profile')
+                              img#nav-gravatar.img-circle.img-responsive(alt='User Pic', src='')
+
+
+        block content
+
+       block scripts
+

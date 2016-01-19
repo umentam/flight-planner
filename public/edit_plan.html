@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Flight Plan</title>
+	<!-- Obtain Bootstrap style sheet from CDN (online service) so it doesn't have to be on my machine -->
+	<!-- Check http://www.bootstrapcdn.com/ for latest version. -->
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+	<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+	<!-- Obtain Bootstrap javascript library from CDN (online service) so it doesn't have to be on my machine -->
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="js/form-methods.js"></script>
+	<script src="js/edit_plan.js"></script>
+</head>
+<body class="fplan" style="margin:20px">
+
+	<form role="form" id="flight-plan-form">
+		<div class=" row0 fplan" id="t1">
+			<img id="faa" src="http://ops.fhwa.dot.gov/Weather/resources/publications/tcmintegration/images/fhwa_shield.jpg"/>
+			FLIGHT PLAN
+			<p class="text-small">U.S DEPARTMENT OF TRANSPORTATION FEDERAL AVIATION ADMINISTRATION</p>
+		</div>
+		<div class=" row0 fplan silver" id="t2">
+			<span>(FAA USE ONLY)</span>
+			<span id="sp2">PILOT BRIEFING</span>
+			<span id="sp3">VNR</span>
+			<span id="sp4">STOPOVER</span>
+		</div>
+		<div class=" row0 fplan text-small silver" id="t3">
+			TIME STARTED
+		</div>
+		<div class=" row0 fplan text-small silver" id="t4">
+			SPECIALIST INITIALS
+		</div>
+		<div class="row1 fplan" id="q1">
+			1. TYPE
+			<input class="field" type="text" id="type" name="type">
+		</div>
+		<div class="row1 fplan text-small" id="q2">
+			2. AIRCRAFT IDENTIFICATION
+			<input class="field" style="margin-top:14px" type="text" name="ident" id="ident">
+		</div>
+		<div class="row1 fplan text-small" id="q3">
+			3. AIRCRAFT TYPE/SPECIAL EQUIPMENT
+			<input class="field" type="text" name="special_equip" id="special_equip">
+		</div>
+		<div class="row1 fplan text-small" id="q4">
+			4. TRUE AIRSPEED
+			<input class="field" type="text" name="true_airspeed" id="true_airspeed">
+		</div>
+		<div class="row1 fplan text-small" id="q5">
+			5. DERPARTURE POINT
+			<input class="field" type="text" name="departure" id="departure">
+		</div>
+		<div class="row1 fplan text-small" id="q6">
+			6. DERPARTURE TIME
+		</div>
+		<div class="row1 fplan text-small" id="q61">
+			PROPOSED(Z)
+			<input class="field" type="text" name="dept_time_proposed" id="dept_time_proposed">
+		</div>
+		<div class="row1 fplan text-small" id="q62">
+			ACTUAL(Z)
+			<input class="field" type="text" name="dept_time_actual" id="dept_time_actual">
+		</div>
+		<div class="row1 fplan text-small" id="q7">
+			7. CRUISING ALTITUDE
+			<input class="field" type="text" name="cruise_alt" id="cruise_alt">
+		</div>
+		<div class="row2 fplan text-small-left">
+			8. ROUTE OF FLIGHT
+			<input class="field" type="text" name="route" id="route">
+		</div>
+		<div class="row3 fplan text-small-left" id="q9">
+			9. DESTINATION (Name of airport and city)
+			<input class="field" type="text" name="dst" id="dst">
+		</div>
+		<div class="row3 fplan text-small" id="q10">
+			10. EST. TIME ENROUTE
+		</div>
+		<div class="row3 fplan text-small" id="q101">
+			HOURS
+			<input class="field" type="text" name="ete" id="ete">
+		</div>
+		<div class="row3 fplan text-small" id="q102">
+			MINUTES
+			<input class="field" type="text" name="ete_min">
+		</div>
+		<div class="row3 fplan text-small-left" id="q11">
+			11. REMARKS
+			<input class="field" type="text" name="remarks" id="remarks">
+		</div>
+		<div class="row4 fplan text-small" id="q12">
+			12. FUEL ON BOARD
+		</div>
+		<div class="row4 fplan text-small" id="q121">
+			HOURS
+			<input class="field" type="text" name="fuel" id="fuel">
+		</div>
+		<div class="row4 fplan text-small" id="q122">
+			MINUTES
+			<input class="field" type="text" name="fuel_min">
+		</div>
+		<div class="row4 fplan text-small-left" id="q13">
+			13. ALTERNATE AIRPORTS(S)
+			<input class="field" type="text" name="alt_airports" id="alt_airports">
+		</div>
+		<div class="row4 fplan text-small-left" id="q14">
+			14. PILOT'S NAME, ADDRESS & TELEPHONE NUMBER & AIRCRAFT HOME BASE
+			<input class="field" type="text" name="name" id="name">
+		</div>
+		<div class="row4 fplan text-small-left" id="q15">
+			15. NUMBER ABOARD
+			<input class="field" type="text" name="num_aboard" id="num_aboard">
+		</div>
+		<div class="row5 fplan text-small-left" id="q16">
+			16. COLOR OF AIRCRAFT
+			<input class="field" type="text" name="color" id="color">
+		</div>
+		<div class="row4 fplan text-small-left" id="q17">
+			17. DESTINATION CONTACT/TELEPHONE (OPTIONAL)
+			<input class="field" type="text" name="dst_contact" id="dst_contact">
+		</div>
+		<div class="row5 fplan text-med-left" id="q18">
+			CIVIL AIRCRAFT PILOTS. FAR Part 91 requires you file an IFR flight plan to operate under instrument flight rules in
+			controlled airspace. Failure to file could result in a civil penalty not to exceed $1,000 for each violation (Section 901 of the
+			Federal Aviation Act of 1958, as amended). Filing of a VFR flight plan is recommended as a good operating practice. See
+			also Part 99 for requirements concerning DVFR flight plans.
+		</div>
+		<div class="plan-buttons">
+			<button type="submit" id="submit" name="button3id" class="btn btn-success">Done/Go Back to Profile</button>
+		</div>
+	</form>
+</body>
+</html>

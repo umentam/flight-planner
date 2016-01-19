@@ -1,0 +1,261 @@
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    zoom: 1;     /* triggers hasLayout */
+}
+#faa{
+    margin: 4px;
+    margin-right: 15px;
+    width: 20%;
+    height: 50%;
+}
+.field {
+    margin: 4px;
+    width: 90%;
+    height: 40%;
+}
+.fplan {
+    border: 1px solid black;
+    position: absolute;
+}
+
+.no-horizontal {
+    overflow-x: hidden;
+
+}
+
+.edit-btn {
+    margin-top: 20px;
+}
+
+#q1 {
+    width: 60px;
+}
+
+#q2 {
+
+    width: 120px;
+    left: 60px;
+}
+#q3 {
+
+    width: 130px;
+    left: 180px;
+}
+#q4 {
+
+    width: 75px;
+    left: 310px;
+}
+#q5 {
+
+    width: 175px;
+    left: 385px;
+}
+#q6 {
+    width: 175px;
+    left: 560px;
+    height: 25px;
+}
+#q61 {
+    width: 87px;
+    left: 560px;
+    height: 40px;
+    margin-top: 25px;
+}
+#q62 {
+    width: 88px;
+    left: 647px;
+    height: 40px;
+    margin-top: 25px;
+}
+#q7 {
+    width: 100px;
+    left: 735px;
+}
+#q9 {
+    width: 170px;
+}
+#q10 {
+    width: 150px;
+    left: 170px;
+    height: 20px;
+}
+#q101 {
+    width: 75px;
+    left: 170px;
+    height: 90px;
+    margin-top: 20px;
+}
+#q102 {
+    width: 75px;
+    left: 245px;
+    height: 90px;
+    margin-top: 20px;
+}
+#q11 {
+    width: 515px;
+    left: 320px;
+}
+#q12 {
+    width: 145px;
+    height: 20px;
+}
+#q121 {
+    width: 72px;
+    height: 90px;
+    margin-top: 20px;
+}
+#q122 {
+    width: 73px;
+    left: 72px;
+    height: 90px;
+    margin-top: 20px;
+}
+#q13 {
+    width: 176px;
+    left: 145px;
+}
+#q14 {
+    width: 440px;
+    left: 321px;
+    height: 55px;
+}
+#q15 {
+     width: 74px;
+     left: 761px;
+ }
+#q16 {
+    width: 200px;
+}
+#q17 {
+    width: 440px;
+    left: 321px;
+    height: 55px;
+    margin-top: 55px;
+}
+#q18 {
+    width: 635px;
+    left: 200px;
+}
+.row0 {
+    height: 70px;
+}
+.row1 {
+    height: 65px;
+    top:70px;
+}
+.row2 {
+    height: 135px;
+    top:135px;
+    width:835px;
+}
+.row3 {
+    height: 110px;
+    top:270px;
+}
+.row4 {
+    height: 110px;
+    top:380px;
+}
+.row5 {
+    height: 75px;
+    top:490px;
+}
+.row6 {
+    height: 30px;
+    top:565px;
+    width: 85px;
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+.silver {
+    background-color: #bfbfbf;
+}
+#sp2 {
+    margin-left: 45px;
+}
+#sp3 {
+    margin-left: 60px;
+}
+#sp4 {
+    margin-left: 200px;
+}
+#submit {
+    height: 100%;
+    width: 100%;
+}
+
+#t1 {
+    width: 175px;
+}
+#t2 {
+    left: 175px;
+    width: 400px;
+}
+#t3 {
+    left: 575px;
+    width: 140px;
+}
+#t4 {
+    left: 715px;
+    width: 120px;
+}
+
+.text-small {
+    font-size: 8px;
+    text-align: center;
+}
+.text-small-left {
+    font-size: 8px;
+    text-align: left;
+}
+.text-med-left {
+    font-size: 10px;
+    text-align: left;
+}
+
+/* Show only vertical scrollbar */
+.vscrollbar
+{
+    overflow-x: hidden; /*for hiding horizontal scroll bar*/
+    overflow-y: auto; /*for vertical scroll bar*/
+}
+
+
+h3 {
+    margin: 30px;
+}
+
+div {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap !important;
+    word-wrap: break-word;
+    white-space : normal;
+}
+
+img {
+    width: 100%;
+
+}
+.plan-buttons {
+    position: absolute;
+    top: 564px
+}
+
+
+

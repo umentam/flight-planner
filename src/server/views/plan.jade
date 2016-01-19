@@ -1,0 +1,104 @@
+extends layout
+
+block title
+    title Create Flight Plan
+
+block css
+    link(rel='stylesheet', type='text/css', href='/css/styles.css')
+
+block content
+    .fplan(style='margin:20px')
+        form#flight-plan-form(role='form')
+            #t1.row0.fplan
+                img#faa(src='http://ops.fhwa.dot.gov/Weather/resources/publications/tcmintegration/images/fhwa_shield.jpg')
+                |                FLIGHT PLAN
+                p.text-small U.S DEPARTMENT OF TRANSPORTATION FEDERAL AVIATION ADMINISTRATION
+            #t2.row0.fplan.silver
+                span (FAA USE ONLY)
+                span#sp2 PILOT BRIEFING
+                span#sp3 VNR
+                span#sp4 STOPOVER
+            #t3.row0.fplan.text-small.silver
+                | TIME STARTED
+            #t4.row0.fplan.text-small.silver
+                | SPECIALIST INITIALS
+            #q1.row1.fplan
+                | 1. TYPE
+                input#type.field(type='text', name='type', required='')
+            #q2.row1.fplan.text-small
+                | 2. AIRCRAFT IDENTIFICATION
+                input#ident.field(style='margin-top:14px', type='text', name='ident', required='')
+            #q3.row1.fplan.text-small
+                | 3. AIRCRAFT TYPE/SPECIAL EQUIPMENT
+                input#special_equip.field(type='text', name='special_equip', required='')
+            #q4.row1.fplan.text-small
+                | 4. TRUE AIRSPEED
+                input#true_airspeed.field(type='text', name='true_airspeed', required='')
+            #q5.row1.fplan.text-small
+                | 5. DERPARTURE POINT
+                input#departure.field(type='text', name='departure', required='')
+            #q6.row1.fplan.text-small
+                | 6. DERPARTURE TIME
+            #q61.row1.fplan.text-small
+                | PROPOSED(Z)
+                input#dept_time_proposed.field(type='text', name='dept_time_proposed', required='')
+            #q62.row1.fplan.text-small
+                | ACTUAL(Z)
+                input#dept_time_actual.field(type='text', name='dept_time_actual', required='')
+            #q7.row1.fplan.text-small
+                | 7. CRUISING ALTITUDE
+                input#cruise_alt.field(type='text', name='cruise_alt', required='')
+            .row2.fplan.text-small-left
+                | 8. ROUTE OF FLIGHT
+                input#route.field(type='text', name='route', required='')
+            #q9.row3.fplan.text-small-left
+                | 9. DESTINATION (Name of airport and city)
+                input#dst.field(type='text', name='dst', required='')
+            #q10.row3.fplan.text-small
+                | 10. EST. TIME ENROUTE
+            #q101.row3.fplan.text-small
+                | HOURS
+                input#ete.field(type='text', name='ete', required='')
+            #q102.row3.fplan.text-small
+                | MINUTES
+                input.field(type='text', name='ete_min')
+            #q11.row3.fplan.text-small-left
+                | 11. REMARKS
+                input#remarks.field(type='text', name='remarks', required='')
+            #q12.row4.fplan.text-small
+                | 12. FUEL ON BOARD
+            #q121.row4.fplan.text-small
+                | HOURS
+                input#fuel.field(type='text', name='fuel', required='')
+            #q122.row4.fplan.text-small
+                | MINUTES
+                input.field(type='text', name='fuel_min')
+            #q13.row4.fplan.text-small-left
+                | 13. ALTERNATE AIRPORTS(S)
+                input#alt_airports.field(type='text', name='alt_airports', required='')
+            #q14.row4.fplan.text-small-left
+                | 14. PILOT'S NAME, ADDRESS & TELEPHONE NUMBER & AIRCRAFT HOME BASE
+                input#name.field(type='text', name='name', required='')
+            #q15.row4.fplan.text-small-left
+                | 15. NUMBER ABOARD
+                input#num_aboard.field(type='text', name='num_aboard', required='')
+            #q16.row5.fplan.text-small-left
+                | 16. COLOR OF AIRCRAFT
+                input#color.field(type='text', name='color', required='')
+            #q17.row4.fplan.text-small-left
+                | 17. DESTINATION CONTACT/TELEPHONE (OPTIONAL)
+                input#dst_contact.field(type='text', name='dst_contact', required='')
+            #q18.row5.fplan.text-med-left
+                | CIVIL AIRCRAFT PILOTS. FAR Part 91 requires you file an IFR flight plan to operate under instrument flight rules in
+                | controlled airspace. Failure to file could result in a civil penalty not to exceed $1,000 for each violation (Section 901 of the
+                | Federal Aviation Act of 1958, as amended). Filing of a VFR flight plan is recommended as a good operating practice. See
+                | also Part 99 for requirements concerning DVFR flight plans.
+            .row6.fplan
+                input#submit.btn.btn-default(type='submit')
+
+block scripts
+    script(src='http://jqueryvalidation.org/files/dist/jquery.validate.min.js')
+    script(src='js/form-methods.js')
+    script(src='js/plan.js')
+
+

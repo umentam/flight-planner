@@ -1,0 +1,17 @@
+extends layout
+
+block title
+    title Map of Nashville
+
+
+block css
+    link(rel='stylesheet', type='text/css', href='/css/map.css')
+    link(rel='stylesheet', href='http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css')
+    script(src='http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js')
+
+
+block content
+    #map
+
+block scripts
+    script(src='/js/map.js')
